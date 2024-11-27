@@ -262,20 +262,61 @@ export default function Home() {
                   <img src="/message-logo.svg" alt="failed" />
                   <input type="text" placeholder="Enter your email address" className="text-[#00000066] font-satoshi font-normal text-[16px] leading-[21.6px] gap-x-3" />
                 </button>
-                <button className="text-black bg-[#FFFFFF] font-satoshi font-medium text-[16px] leading-[21.6px] py-3 px-[88px] rounded-[62px]"> Subscribe to Newsletter </button>
+                <button className="text-black bg-[#FFFFFF] font-satoshi font-medium text-[16px]  w-[366px] h-[54px] leading-[21.6px] py-3 px-[88px] rounded-[62px]"> Subscribe to Newsletter </button>
               </div>
             </div>
           </section>
 
 
-          <section className="pb-[50px] flex justify-between">
-            <div className="w-[248px] space-y-[35px]">
-              <div className="space-y-6">
-                <img src="/logo.png" alt="Logo" />
-
+          <section className=" flex  ml-[70px] gap-x-[90px] items-center">
+            <div className="w-[236px]">
+              <img src="/logo.png" alt="Logo" />
+              <p className="mt-[25px] font-satoshi font-normal text-[14px] leading-[22px] text-[#00000099]">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+              <img className="mt-[40px]" src="social.svg" alt="failed" />
+            </div>
+            <div className="flex flex-col gap-[26px]" >
+              <span className="font-satoshi font-medium text-[16px] leading-[18px] tracking-[3px] text-black"> COMPANY</span>
+              <div className="text-[#00000099] font-satoshi font-normal text-[16px] leading-[19px] flex flex-col gap-5">
+                <p>About</p>
+                <p>Features</p>
+                <p>Works</p>
+                <p>Career</p>
               </div>
             </div>
+            <div className="flex flex-col gap-[26px] w-[140px]" >
+              <span className="font-satoshi font-medium text-[16px] leading-[18px] tracking-[3px] text-black">HELP</span>
+              <div className="text-[#00000099] font-satoshi font-normal text-[16px] leading-[19px] flex flex-col gap-5">
+                <p>Customer Support</p>
+                <p>Delivery Details</p>
+                <p>Terms & Conditions</p>
+                <p>Privacy Policy</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-[26px] w-[130px]" >
+              <span className="font-satoshi font-medium text-[16px] leading-[18px] tracking-[3px] text-black"> FAQ</span>
+              <div className="text-[#00000099] font-satoshi font-normal text-[16px] leading-[19px] flex flex-col gap-5">
+                <p>Account</p>
+                <p>Manage Deliveries</p>
+                <p>Orders</p>
+                <p>Payments</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-[26px] w-[154px]" >
+              <span className="font-satoshi font-medium text-[16px] leading-[18px] tracking-[3px] text-black"> Resources</span>
+              <div className="text-[#00000099] font-satoshi font-normal text-[16px] leading-[19px] flex flex-col gap-5">
+                <p>Free eBooks</p>
+                <p>Development Tutorial</p>
+                <p>How to - Blog</p>
+                <p>Youtube Playlist</p>
+              </div>
+            </div>
+
           </section>
+            <div className="border bottom-[1px] border-rgba(0, 0, 0, 0.1)  mt-[50px] mb-[25px]  mx-[50px] " />
+            <div className="mx-[60px] pb-[88px] flex justify-between items-center">
+              <p className="text-[#00000099] font-satoshi font-normal text-[14px] leading-[18.9px]  ">Shop.co © 2000-2023, All Rights Reserved</p>
+              <img src="/payment.svg" alt="failed" />
+            </div>
         </footer>
 
       </main>
