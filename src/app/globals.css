@@ -3,13 +3,22 @@
 @tailwind utilities;
 
 h1 {
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 700;
+    @apply text-4xl sm:text-[64px] leading-[34px] sm:leading-[64px] font-bold;
 }
 
 h2 {
-    font-size: 40px;
-    line-height: 54px;
-    font-weight: 700;
+    @apply text-[24px] leading-[32px]  font-bold sm:text-[40px] sm:font-bold sm:leading-[54px];
+}
+
+.hero-bg {
+    background-image: url("../../public/bg-hero-small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+@media screen and (min-width:640px) {
+    .hero-bg {
+        background-image: url("../../public/hero-bg.png");
+    }
 }

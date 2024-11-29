@@ -2,21 +2,24 @@ export default function Home() {
   return (
     <>
       {/* Header */}
-      <header className="px-[100px] h-[38px] bg-black flex justify-between items-center">
+      <header className="sm:px-[100px] h-[34px] sm:h-[38px] bg-black flex justify-center sm:justify-between items-center">
         <p className="text-[#FFFFFF] font-satoshi font-normal text-[14px] leading-[18.9px] grow text-center">Sign up and get 20% off to your first order. <span className="underline decoration-solid decoration-underline text-[#FFFFFF]">Sign Up Now</span></p>
-        <img className="" src="/cross.svg" alt=" failed" />
+        <img src="/cross.svg" alt=" failed" className="max-sm:hidden" />
       </header>
 
 
 
 
 
-
       {/* Navbar */}
-      <nav className="px-[100px] py-6 flex justify-between items-center gap-x-10">
-        <img src="/logo.png" alt="Logo" title="Shop.co" />
+      <nav className="px-4 sm:px-[100px] py-6 flex justify-between items-center gap-x-10">
+        <div className="flex items-center gap-x-4">
+          <img src="/nav-hamburger.svg" alt="Hamburger" className="sm:hidden" />
+          <img src="/logo.png" alt="Logo" title="Shop.co" />
+        </div>
 
-        <ul className="flex gap-x-6 items-center">
+
+        <ul className="flex gap-x-6 items-center max-sm:hidden">
           <li className="flex gap-x-1 items-center">
             <span>Shop</span>
             <img src="/downward-arrow.svg" alt="Arrow-down" />
@@ -26,14 +29,17 @@ export default function Home() {
           <li>Brands</li>
         </ul>
 
-        <div className="relative grow">
+
+
+        <div className="relative grow max-sm:hidden">
           <img src="/search.svg" alt="Search" className="absolute top-3 left-4" />
           <input type="text" className="py-3 pl-[52px] pr-4 rounded-full bg-[#F0F0F0] w-full" placeholder="Search for products..." />
         </div>
 
-        <div className="flex items-center gap-x-[14px]">
+        <div className="flex items-center gap-x-3 sm:gap-x-[14px]">
           <img src="/cart.svg" alt="Cart" />
           <img src="/user.svg" alt="User" />
+          <img src="/search-mobile.svg" alt="Search" className="sm:hidden" />
         </div>
       </nav>
 
@@ -44,26 +50,26 @@ export default function Home() {
       <main>
 
         {/* Hero */}
-        <section className="px-[100px] py-[113px] bg-cover bg-[-80px]" style={{ backgroundImage: "url('./hero-bg.png')" }}>
-          <div className="w-[577px] space-y-12">
+        <section className="px-4 sm:px-[100px] py-10 sm:py-[113px] max-sm:h-[1000px] bg-cover bg-[-80px] hero-bg bg-[#F2F0F1]">
+          <div className="sm:w-[577px] space-y-12">
             <div className="space-y-8">
-              <h1 className="text-6xl">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+              <h1 className="w-[315px] text-[36px] sm:text-6xl sm:w-[557px] sm:text-[64px]">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
 
-              <p className="opacity-60">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+              <p className="sm:w-[458px] text-[14px] leading-5 sm:opacity-60">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
 
-              <button className="px-[54px] py-4 bg-black text-white rounded-full">Shop now</button>
+              <button className="max-sm:w-full sm:px-[54px] sm:w-[210px] py-4 bg-black text-white rounded-full">Shop now</button>
             </div>
 
-            <div className="flex divide-x divide-[#0000001a]">
-              <div className="pr-8">
+            <div className="flex max-sm:flex-wrap max-sm:justify-center max-sm:gap-y-3 sm:divide-x divide-[#0000001a]">
+              <div className="pr-4 ml-8 sm:pr-8 max-sm:border-r border-[#0000001a]">
                 <h2>200+</h2>
-                <span className="opacity-60">International Brands</span>
+                <span className="max-sm:text-[12px] opacity-60">International Brands</span>
               </div>
-              <div className="px-8">
+              <div className="pl-8 sm:px-8">
                 <h2>2,000+</h2>
                 <span className="opacity-60">High-Quality Products</span>
               </div>
-              <div className="pl-8">
+              <div className="sm:pl-8">
                 <h2>30,000+</h2>
                 <span className="opacity-60">Happy Customers</span>
               </div>
@@ -73,18 +79,16 @@ export default function Home() {
 
 
         {/* Sponsers Brand Names*/}
-        <section>
-          <div className=" bg-black flex gap-[106px] px-[100px] py-[44px]">
-            <img src="/versac.png" alt="Sponsers-1" />
-            <img src="/zara.png" alt="Sponsers-2" />
-            <img src="/gucci.png" alt="Sponsers-3" />
-            <img src="/prada.png" alt="Sponsers-4" />
-            <img src="/calvin.png" alt="Sponsers-5" />
-          </div>
+        <section className="px-4 sm:px-[100px] py-10 sm:py-11 bg-black flex flex-wrap max-sm:gap-x-8 max-sm:gap-y-6 sm:justify-between">
+          <img src="/versace.png" alt="versace" className="h-6 sm:h-8" />
+          <img src="/zara.png" alt="zara" className="h-6 sm:h-8" />
+          <img src="/gucci.png" alt="gucci" className="h-6 sm:h-8" />
+          <img src="/prada.png" alt="prada" className="h-6 sm:h-8" />
+          <img src="/calvin.png" alt="calvin" className="h-6 sm:h-8" />
         </section>
 
         {/* Heading of new Arrival */}
-        <p className="font-integral font-bold text-[48px] leading-[57.6px] text-center mt-[72px] mb-[55px]">NEW ARRIVALS</p>
+        <p className="font-integral font-bold text-[32px] leading-[38px] mt-[50px]  mb-[32px] sm:text-[48px] sm:leading-[57.6px] text-center sm:mt-[72px] sm:mb-[55px]">NEW ARRIVALS</p>
 
         {/* New Arrival Products */}
         <section>
@@ -111,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" space-y-4">
+            <div className="max-sm:hidden space-y-4">
               <img className=" w-[350px] h-[322px] rounded-[20px]" src="/check-red-shirt.svg" alt="failed" />
               <div className="space-y-2" >
                 <p className="font-satoshi font-bold text-[20px] leading-[27px]">CHECKERED SHIRT</p>
@@ -119,7 +123,7 @@ export default function Home() {
                 <span className="font-satoshi font-bold text-[24px] leading-[32.4px]">$180</span>
               </div>
             </div>
-            <div className=" space-y-4">
+            <div className=" max-sm:hidden space-y-4">
               <img className="w-[350px] h-[316px] rounded-[20px]" src="/red-black-t-shirt.svg" alt="failed" />
               <div className="space-y-2" >
                 <p className="font-satoshi font-bold text-[20px] leading-[27px]">SLEEVE STRIPED T-SHIRT</p>
@@ -140,16 +144,16 @@ export default function Home() {
 
         {/* View All tab*/}
         <section className="flex justify-center">
-          <button className="mt-9 rounded-[62px] border border-rgba(0, 0, 0, 0.1) opacity-[10px] py-[16px] px-[54px] brgba(0, 0, 0, 0.1) gap-[12px]">
+          <button className="max-sm:w-full max-sm:mx-4 mt-9 rounded-[62px] border border-rgba(0, 0, 0, 0.1) opacity-[10px] py-[16px] px-[54px] brgba(0, 0, 0, 0.1) gap-[12px]">
             <span className="font-satoshi font-medium text-[16px] leading-[21.6px]">View All</span>
           </button>
         </section>
 
         {/* line break tab*/}
-        <div className=" border bottom-[1px] border-rgba(0, 0, 0, 0.1) mt-[64px] mb-[64px]  mx-[100px]" />
+        <div className=" border bottom-[1px] border-rgba(0, 0, 0, 0.1) my-10 mx-4 sm:my-[64px]  sm:mx-[100px]" />
 
         {/* Heading of top selling */}
-        <p className="font-integral font-bold text-[48px] leading-[57.6px] text-center ">TOP SELLING</p>
+        <p className="font-integral font-bold text-[32px] leading-[38px] mt-[50px]  mb-[32px] sm:text-[48px] sm:leading-[57.6px] text-center sm:mt-[72px] sm:mb-[55px]">TOP SELLING</p>
 
         {/* Top selling Products */}
         <section>
@@ -176,7 +180,7 @@ export default function Home() {
                 <span className="font-satoshi font-bold text-[24px] leading-[32.4px]">$145</span>
               </div>
             </div>
-            <div className=" space-y-4">
+            <div className="max-sm:hidden  space-y-4">
               <img className=" w-[350px] h-[322px] rounded-[20px]" src="/short.svg" alt="failed" />
               <div className="space-y-2" >
                 <p className="font-satoshi font-bold text-[20px] leading-[27px]">LOOSE FIT BERMUDA SHORTS</p>
@@ -184,7 +188,7 @@ export default function Home() {
                 <span className="font-satoshi font-bold text-[24px] leading-[32.4px]">$80</span>
               </div>
             </div>
-            <div className=" space-y-4">
+            <div className="max-sm:hidden  space-y-4">
               <img className=" w-[350px] h-[322px] rounded-[20px]" src="/black.svg" alt="failed" />
               <div className="space-y-2" >
                 <p className="font-satoshi font-bold text-[20px] leading-[27px]">FADED SKINNY JEANS</p>
@@ -203,7 +207,7 @@ export default function Home() {
         </section>
 
         {/* Dress style sectiom*/}
-        <section className=" space-y-5 mt-[80px] mx-[100px]  rounded-[40px] bg-[#F0F0F0] ">
+        <section className=" space-y-5 mt-[80px] mx-[100px]  rounded-[40px] bg-[#F0F0F0]">
           <p className="pt-[70px] font-integral font-bold text-[48px] leading-[57.6px] text-center">BROWSE BY DRESS STYLE</p>
           <div className=" flex gap-x-5 items-center pt-[64px]">
             <img className="ml-[64px]" src="/casual.svg" alt="failed" />
@@ -312,11 +316,11 @@ export default function Home() {
             </div>
 
           </section>
-            <div className="border bottom-[1px] border-rgba(0, 0, 0, 0.1)  mt-[50px] mb-[25px]  mx-[50px] " />
-            <div className="mx-[60px] pb-[88px] flex justify-between items-center">
-              <p className="text-[#00000099] font-satoshi font-normal text-[14px] leading-[18.9px]  ">Shop.co © 2000-2023, All Rights Reserved</p>
-              <img src="/payment.svg" alt="failed" />
-            </div>
+          <div className="border bottom-[1px] border-rgba(0, 0, 0, 0.1)  mt-[50px] mb-[25px]  mx-[50px] " />
+          <div className="mx-[60px] pb-[88px] flex justify-between items-center">
+            <p className="text-[#00000099] font-satoshi font-normal text-[14px] leading-[18.9px] ">Shop.co © 2000-2023, All Rights Reserved</p>
+            <img src="/payment.svg" alt="failed" />
+          </div>
         </footer>
 
       </main>
