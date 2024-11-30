@@ -1,13 +1,46 @@
+/* @import url(https://db.onlinewebfonts.com/c/f1fcc5aed1e20fc0cdb9f8a7573625bd?family=Integral+CF+Regular);
+@import url(https://db.onlinewebfonts.com/c/f1fcc5aed1e20fc0cdb9f8a7573625bd?family=Satoshi+Regular); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Integral CF";
+    src: url("./fonts/integralcf-bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/satoshi-regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-integral;
+}
 
 h1 {
     @apply text-4xl sm:text-[64px] leading-[34px] sm:leading-[64px] font-bold;
 }
 
 h2 {
-    @apply text-[24px] leading-[32px]  font-bold sm:text-[40px] sm:font-bold sm:leading-[54px];
+    @apply text-[24px] leading-[32px] font-bold sm:text-[40px] sm:font-bold sm:leading-[54px];
 }
 
 .hero-bg {
@@ -17,8 +50,16 @@ h2 {
     background-position: bottom;
 }
 
+.w-footer-cta {
+    width: calc(100% - 32px);
+}
+
 @media screen and (min-width:640px) {
     .hero-bg {
         background-image: url("../../public/hero-bg.png");
+    }
+
+    .w-footer-cta {
+        width: 1240px;
     }
 }
